@@ -9,7 +9,7 @@ Credenciais de usuário para teste:
 - Password <b>fatec</b>:
 
 Nova Cobertura de testes:
-![alt text](cobertura.png)
+![alt text](cobertura.PNG)
 
 
 
