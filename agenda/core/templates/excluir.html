@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+  <div class="card shadow-sm">
+    <div class="card-header bg-danger text-white">
+      <h4><i class="fas fa-trash-alt me-2"></i>Excluir Contato</h4>
+    </div>
+    <div class="card-body">
+      <p>Tem certeza que deseja excluir o contato <strong>{{ contato.nome_completo }}</strong>?</p>
+      <p><i class="fas fa-envelope me-1"></i> {{ contato.email }}<br>
+         <i class="fas fa-phone me-1"></i> {{ contato.telefone }}</p>
+      <form method="post">
+        {% csrf_token %}
+        <div class="d-flex justify-content-between">
+          <button type="submit" class="btn btn-danger">
+            <i class="fas fa-trash me-2"></i>Excluir
+          </button>
+          <a href="{% url 'listar_contatos' %}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left me-2"></i>Cancelar
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -2,8 +2,18 @@
 
 Desafio técnico para os alunos da disciplina "Desenvolvimento Web 3"
 
+Credenciais de usuário para teste:
+
+- Username <b>admin</b>:
+- E-mail address <b>lucas.rosolem@fatec.sp.gov.br</b>:
+- Password <b>fatec</b>:
+
+Nova Cobertura de testes:
+![alt text](cobertura.png)
 
 
+
+Atividade Avaliativa:
 
 No ambiente Linux:
 

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+  <h2>Lista de Contatos</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Email</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for contato in contatos %}
+      <tr>
+        <td>{{ contato.nome_completo }}</td>
+        <td>{{ contato.telefone }}</td>
+        <td>{{ contato.email }}</td>
+        <td>
+          <a href="{% url 'editar_contato' contato.id %}" class="btn btn-warning btn-sm">Editar</a>
+          <a href="{% url 'excluir_contato' contato.id %}" class="btn btn-danger btn-sm">Excluir</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+            <a href="{% url 'index' %}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left me-2"></i>Voltar
+          </a>
+  <a href="{% url 'cadastrar_contato' %}" class="btn btn-primary">Novo Contato</a>
+</div>
+{% endblock %}
